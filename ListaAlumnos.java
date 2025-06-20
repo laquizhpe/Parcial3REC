@@ -13,10 +13,10 @@ public class ListaAlumnos {
         System.out.println("--------------------------------------");
         for (int i = 0; i < alumnos.size(); i++) {
             Alumno a = alumnos.get(i);
-            System.out.println(a.nombre + "\t" +
-                String.format("%.1f", a.nota1) + "\t" +
-                String.format("%.1f", a.nota2) + "\t" +
-                String.format("%.1f", a.nota3) + "\t" +
+            System.out.println(a.getNombre() + "\t" +
+                String.format("%.1f", a.getNota1()) + "\t" +
+                String.format("%.1f", a.getNota2()) + "\t" +
+                String.format("%.1f", a.getNota3()) + "\t" +
                 String.format("%.1f", a.promedio()));
         }
     }
@@ -30,19 +30,19 @@ public class ListaAlumnos {
     }
 
     public static void main(String[] args) {
-        ListaAlumnos lista = new ListaAlumnos();
-        lista.agregarAlumno("Ana", 8.5, 7.0, 9.0);
-        lista.agregarAlumno("Luis", 6.0, 7.5, 8.0);
-        lista.agregarAlumno("Carlos", 9.0, 8.5, 7.5);
-        lista.agregarAlumno("Maria", 7.0, 8.0, 8.5);
-        lista.agregarAlumno("Sofia", 8.0, 9.0, 7.0);
-        
+        Asignatura asignatura = new Asignatura();
+        asignatura.altaAlumno("Ana", 8.5, 7.0, 9.0);
+        asignatura.altaAlumno("Luis", 6.0, 7.5, 8.0);
+        asignatura.altaAlumno("Carlos", 9.0, 8.5, 7.5);
+        asignatura.altaAlumno("Maria", 7.0, 8.0, 8.5);
+        asignatura.altaAlumno("Sofia", 8.0, 9.0, 7.0);
+
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println("\tLISTADO DE ALUMNOS");
         System.out.println("--------------------------------------");
-        lista.mostrarAlumnos();
+        asignatura.mostrarAlumnos();
         System.out.println("--------------------------------------");
-        System.out.println("Nota media del grupo: " + lista.promedioGeneral());
+        System.out.println("Nota media del grupo: " + asignatura.promedioGeneral());
     }
 }
