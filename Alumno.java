@@ -27,7 +27,7 @@ public class Alumno {
         if (nota1 >= 0 && nota1 <= 10) {
             this.nota1 = nota1;
         } else {
-            throw new IllegalArgumentException("La nota1 debe estar entre 0 y 10");
+            throw new IllegalArgumentException(Mensajes.ERROR_NOTA1);
         }
     }
 
@@ -39,7 +39,7 @@ public class Alumno {
         if (nota2 >= 0 && nota2 <= 10) {
             this.nota2 = nota2;
         } else {
-            throw new IllegalArgumentException("La nota2 debe estar entre 0 y 10");
+            throw new IllegalArgumentException(Mensajes.ERROR_NOTA2);
         }
     }
 
@@ -51,7 +51,7 @@ public class Alumno {
         if (nota3 >= 0 && nota3 <= 10) {
             this.nota3 = nota3;
         } else {
-            throw new IllegalArgumentException("La nota3 debe estar entre 0 y 10");
+            throw new IllegalArgumentException(Mensajes.ERROR_NOTA3);
         }
     }
 
